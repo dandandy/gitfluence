@@ -1,0 +1,16 @@
+modules:
+  function:
+    - key: main
+      handler: index.run
+  # https://developer.atlassian.com/platform/forge/manifest-reference/modules/web-trigger/
+  webTrigger:
+    - key:
+      function: main
+app:
+  id: ari:cloud:ecosystem::app/1e9ebe57-94a6-4a00-b2bf-bf37cab872c3
+permissions:
+  # https://developer.atlassian.com/cloud/confluence/scopes-for-oauth-2-3LO-and-forge-apps/
+ scopes:
+ - write:page:confluence
+ - read:confluence-content.all
+ - storage:app
