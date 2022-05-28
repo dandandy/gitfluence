@@ -2,10 +2,16 @@ modules:
   function:
     - key: main
       handler: index.run
+    - key: mainSettings
+      handler: index.runSettings
   # https://developer.atlassian.com/platform/forge/manifest-reference/modules/web-trigger/
-  webTrigger:
-    - key:
+  webtrigger:
+    - key: triggerA
       function: main
+  confluence:globalSettings:
+    - key: settings
+      function: mainSettings
+      title: GitFluence
 app:
   id: ari:cloud:ecosystem::app/1e9ebe57-94a6-4a00-b2bf-bf37cab872c3
 permissions:
